@@ -14,9 +14,9 @@ import { NavigationCancel,
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
 
-  
+
 
   title = 'angular7crud';
   version;

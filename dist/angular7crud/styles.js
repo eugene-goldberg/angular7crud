@@ -596,8 +596,8 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/rle0612/Documents/Azure-Devops/Aws_project/Angular/src/styles.css */"./src/styles.css");
-module.exports = __webpack_require__(/*! /home/rle0612/Documents/Azure-Devops/Aws_project/Angular/node_modules/bootstrap/dist/css/bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
+__webpack_require__(/*! /Users/e602684/dev/Angular7CRUDExample/src/styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! /Users/e602684/dev/Angular7CRUDExample/node_modules/bootstrap/dist/css/bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
 
 
 /***/ })

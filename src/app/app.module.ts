@@ -12,13 +12,15 @@ import { GstGetComponent } from './gst-get/gst-get.component';
 import { GstEditComponent } from './gst-edit/gst-edit.component';
 
 import { BusinessService } from './business.service';
+import { IndicesGetComponent } from './indices-get/indices-get.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GstAddComponent,
     GstGetComponent,
-    GstEditComponent
+    GstEditComponent,
+    IndicesGetComponent
   ],
   imports: [
     BrowserModule,

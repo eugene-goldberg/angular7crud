@@ -38,12 +38,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _gst_add_gst_add_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./gst-add/gst-add.component */ "./src/app/gst-add/gst-add.component.ts");
 /* harmony import */ var _gst_edit_gst_edit_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./gst-edit/gst-edit.component */ "./src/app/gst-edit/gst-edit.component.ts");
 /* harmony import */ var _gst_get_gst_get_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./gst-get/gst-get.component */ "./src/app/gst-get/gst-get.component.ts");
+/* harmony import */ var _indices_get_indices_get_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./indices-get/indices-get.component */ "./src/app/indices-get/indices-get.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -61,6 +63,10 @@ var routes = [
     {
         path: 'business',
         component: _gst_get_gst_get_component__WEBPACK_IMPORTED_MODULE_4__["GstGetComponent"]
+    },
+    {
+        path: 'indices',
+        component: _indices_get_indices_get_component__WEBPACK_IMPORTED_MODULE_5__["IndicesGetComponent"]
     }
 ];
 var AppRoutingModule = /** @class */ (function () {
@@ -97,7 +103,7 @@ module.exports = "h1{\n    text-align:center;\n}\nh2{\n    text-align: center;\n
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ng2-slim-loading-bar color=\"blue\"></ng2-slim-loading-bar>\n<body style=\"background-color:powderblue;\">\n<h1 style=\"font-family:verdana;\"> Welcome to Azure Devops Demo!  </h1>\n<h2 style=\"font-family:courier;\"> Build version number {{version.version}} </h2>\n</body>\n<!-- <nav class=\"navbar navbar-expand-sm bg-light\">\n  <div class=\"container-fluid\">\n    <ul class=\"navbar-nav\">\n      <li class=\"nav-item\">\n        <a routerLink=\"business/create\" class=\"nav-link\" routerLinkActive=\"active\">\n          Create Business\n        </a>\n      </li>\n      <li class=\"nav-item\">\n        <a routerLink=\"business\" class=\"nav-link\" routerLinkActive=\"active\">\n          Business\n        </a>\n      </li> \n    </ul>\n  </div>\n</nav> -->\n<br />\n<div class=\"container\">\n  <router-outlet></router-outlet>\n</div>"
+module.exports = "<ng2-slim-loading-bar color=\"blue\"></ng2-slim-loading-bar>\n<body style=\"background-color:powderblue;\">\n<h1 style=\"font-family:verdana;\"> Solution Hub  </h1>\n<h2 style=\"font-family:courier;\"> Build version number {{version.version}} </h2>\n</body>\n<nav class=\"navbar navbar-expand-sm bg-light\">\n  <div class=\"container-fluid\">\n    <ul class=\"navbar-nav\">\n      <li class=\"nav-item\">\n        <a routerLink=\"business/create\" class=\"nav-link\" routerLinkActive=\"active\">\n          Create Business\n        </a>\n      </li>\n      <li class=\"nav-item\">\n        <a routerLink=\"business\" class=\"nav-link\" routerLinkActive=\"active\">\n          Business\n        </a>\n      </li>\n      <li class=\"nav-item\">\n        <a routerLink=\"indices\" class=\"nav-link\" routerLinkActive=\"active\">\n          List Indices\n        </a>\n      </li>\n    </ul>\n  </div>\n</nav>\n<br />\n<div class=\"container\">\n  <router-outlet></router-outlet>\n</div>\n"
 
 /***/ }),
 
@@ -198,12 +204,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _gst_get_gst_get_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./gst-get/gst-get.component */ "./src/app/gst-get/gst-get.component.ts");
 /* harmony import */ var _gst_edit_gst_edit_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./gst-edit/gst-edit.component */ "./src/app/gst-edit/gst-edit.component.ts");
 /* harmony import */ var _business_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./business.service */ "./src/app/business.service.ts");
+/* harmony import */ var _indices_get_indices_get_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./indices-get/indices-get.component */ "./src/app/indices-get/indices-get.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -224,7 +232,8 @@ var AppModule = /** @class */ (function () {
                 _app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"],
                 _gst_add_gst_add_component__WEBPACK_IMPORTED_MODULE_7__["GstAddComponent"],
                 _gst_get_gst_get_component__WEBPACK_IMPORTED_MODULE_8__["GstGetComponent"],
-                _gst_edit_gst_edit_component__WEBPACK_IMPORTED_MODULE_9__["GstEditComponent"]
+                _gst_edit_gst_edit_component__WEBPACK_IMPORTED_MODULE_9__["GstEditComponent"],
+                _indices_get_indices_get_component__WEBPACK_IMPORTED_MODULE_11__["IndicesGetComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -581,6 +590,131 @@ var GstGetComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/index.service.ts":
+/*!**********************************!*\
+  !*** ./src/app/index.service.ts ***!
+  \**********************************/
+/*! exports provided: IndexService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IndexService", function() { return IndexService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var IndexService = /** @class */ (function () {
+    function IndexService(http) {
+        this.http = http;
+        this.uri = '/indices';
+        this.versionuri = '/getversion';
+    }
+    IndexService.prototype.getIndex = function () {
+        return this
+            .http
+            .get('/indices');
+    };
+    IndexService.prototype.getVersion = function () {
+        return this
+            .http
+            .get("" + this.versionuri);
+    };
+    IndexService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+    ], IndexService);
+    return IndexService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/indices-get/indices-get.component.css":
+/*!*******************************************************!*\
+  !*** ./src/app/indices-get/indices-get.component.css ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2luZGljZXMtZ2V0L2luZGljZXMtZ2V0LmNvbXBvbmVudC5jc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/indices-get/indices-get.component.html":
+/*!********************************************************!*\
+  !*** ./src/app/indices-get/indices-get.component.html ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  indices-get works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/indices-get/indices-get.component.ts":
+/*!******************************************************!*\
+  !*** ./src/app/indices-get/indices-get.component.ts ***!
+  \******************************************************/
+/*! exports provided: IndicesGetComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IndicesGetComponent", function() { return IndicesGetComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _index_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../index.service */ "./src/app/index.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var IndicesGetComponent = /** @class */ (function () {
+    function IndicesGetComponent(is) {
+        this.is = is;
+    }
+    IndicesGetComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        console.log('indices-get.component.ts');
+        this.is
+            .getIndex()
+            .subscribe(function (data) {
+            _this.indices = data;
+        });
+    };
+    IndicesGetComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-indices-get',
+            template: __webpack_require__(/*! ./indices-get.component.html */ "./src/app/indices-get/indices-get.component.html"),
+            styles: [__webpack_require__(/*! ./indices-get.component.css */ "./src/app/indices-get/indices-get.component.css")]
+        }),
+        __metadata("design:paramtypes", [_index_service__WEBPACK_IMPORTED_MODULE_1__["IndexService"]])
+    ], IndicesGetComponent);
+    return IndicesGetComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/environments/environment.ts":
 /*!*****************************************!*\
   !*** ./src/environments/environment.ts ***!
@@ -642,7 +776,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/rle0612/Documents/Azure-Devops/Aws_project/Angular/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/e602684/dev/Angular7CRUDExample/src/main.ts */"./src/main.ts");
 
 
 /***/ })
