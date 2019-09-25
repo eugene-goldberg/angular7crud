@@ -1,3 +1,14 @@
 <p>
   indices-get works!
 </p>
+
+<pre>
+  {{indices}}
+</pre>
+
+<form #myform="ngForm" (ngSubmit)="listAllIndices()" class="form form-register">
+
+  <div class="form-field">
+    <input type="submit" value="List All Elastic Indices">
+  </div>
+</form>

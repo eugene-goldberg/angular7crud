@@ -240,7 +240,8 @@ var AppModule = /** @class */ (function () {
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"],
                 ng2_slim_loading_bar__WEBPACK_IMPORTED_MODULE_5__["SlimLoadingBarModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"],
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"]
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"]
             ],
             providers: [_business_service__WEBPACK_IMPORTED_MODULE_10__["BusinessService"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
@@ -660,7 +661,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  indices-get works!\n</p>\n"
+module.exports = "<p>\n  indices-get works!\n</p>\n\n<pre>\n  {{indices}}\n</pre>\n\n<form #myform=\"ngForm\" (ngSubmit)=\"listAllIndices()\" class=\"form form-register\">\n\n  <div class=\"form-field\">\n    <input type=\"submit\" value=\"List All Elastic Indices\">\n  </div>\n</form>\n"
 
 /***/ }),
 
@@ -690,15 +691,18 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var IndicesGetComponent = /** @class */ (function () {
     function IndicesGetComponent(is) {
         this.is = is;
+        this.listAllIndices = function () {
+            var _this = this;
+            console.log('indices-get.component.ts');
+            this.is
+                .getIndex()
+                .subscribe(function (data) {
+                _this.indices = data;
+                console.log(_this.indices);
+            });
+        };
     }
     IndicesGetComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        console.log('indices-get.component.ts');
-        this.is
-            .getIndex()
-            .subscribe(function (data) {
-            _this.indices = data;
-        });
     };
     IndicesGetComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({

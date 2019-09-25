@@ -23,15 +23,23 @@ indexRoutes.route('/add').post(function (req, res) {
     });
 });
 
+const listAll = function(){
+  const indices =  client.cat.indices({format: 'json'});
+  console.log('indices:', indices);
+};
+
 // Defined get data(index or listing) route
 indexRoutes.route('/').get(function (req, res) {
   client.ping({
     requestTimeout: 30000,
-  }, function (error) {
+  }, async function (error) {
     if (error) {
       console.error('elasticsearch cluster is down!');
     } else {
       console.log('All is well');
+      const result = await client.cat.indices({format: 'json'});
+      const str = JSON.stringify(result[0]);
+      await res.json(str);
     }
   });
 });

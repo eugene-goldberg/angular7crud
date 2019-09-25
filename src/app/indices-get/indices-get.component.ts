@@ -9,17 +9,22 @@ import {IndexService} from '../index.service';
 })
 export class IndicesGetComponent implements OnInit {
 
-  indices: Index[];
+  indices: Index;
 
   constructor(private is: IndexService) { }
 
   ngOnInit() {
-    console.log('indices-get.component.ts');
-    this.is
-      .getIndex()
-      .subscribe((data: Index[]) => {
-        this.indices = data;
-      });
+
   }
+
+   listAllIndices = function() {
+     console.log('indices-get.component.ts');
+     this.is
+       .getIndex()
+       .subscribe((data: Index) => {
+         this.indices = data;
+         console.log(this.indices);
+       });
+  };
 
 }

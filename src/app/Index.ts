@@ -1,5 +1,8 @@
-export default class Business {
-  person_name: String;
-  business_name: String;
-  business_gst_number: Number;
+export default class Index {
+  health: String;
+  status: String;
+  index: String;
+  uuid: String;
+  pri: String;
+  rep: String;
 }
