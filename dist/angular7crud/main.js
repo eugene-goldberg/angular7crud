@@ -661,7 +661,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  indices-get works!\n</p>\n\n<pre>\n  {{indices}}\n</pre>\n\n<form #myform=\"ngForm\" (ngSubmit)=\"listAllIndices()\" class=\"form form-register\">\n\n  <div class=\"form-field\">\n    <input type=\"submit\" value=\"List All Elastic Indices\">\n  </div>\n</form>\n"
+module.exports = "<h2>Indices</h2>\n<ul>\n  <li *ngFor=\"let item of indices\">\n     <span >{{item.index}}</span>\n  </li>\n</ul>"
 
 /***/ }),
 
@@ -698,11 +698,11 @@ var IndicesGetComponent = /** @class */ (function () {
                 .getIndex()
                 .subscribe(function (data) {
                 _this.indices = data;
-                console.log(_this.indices);
             });
         };
     }
     IndicesGetComponent.prototype.ngOnInit = function () {
+        this.listAllIndices();
     };
     IndicesGetComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -780,7 +780,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/e602684/dev/Angular7CRUDExample/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/eugene/dev/angular7crud/src/main.ts */"./src/main.ts");
 
 
 /***/ })

@@ -38,8 +38,8 @@ indexRoutes.route('/').get(function (req, res) {
     } else {
       console.log('All is well');
       const result = await client.cat.indices({format: 'json'});
-      const str = JSON.stringify(result[0]);
-      await res.json(str);
+      // const str = JSON.stringify(result);
+      await res.json(result);
     }
   });
 });
